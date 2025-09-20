@@ -30,6 +30,13 @@ export interface TooltipTriggerProps {
   children: React.ReactElement;
 }
 
+interface TooltipTriggerChildProps {
+  onPressIn?: (e: any) => void;
+  onPressOut?: (e: any) => void;
+  ref?: React.Ref<any>;
+  [key: string]: any;
+}
+
 const Trigger: React.FC<TooltipTriggerProps> = ({ children }) => {
   const ctx = useContext(Ctx);
   const ref = React.useRef<View>(null);
@@ -49,10 +56,18 @@ const Trigger: React.FC<TooltipTriggerProps> = ({ children }) => {
 
   const onPressOut = () => ctx.setOpen(false);
 
+  // Use a wrapper View to handle the ref and press events
   return (
-    <Pressable onPressIn={onPressIn} onPressOut={onPressOut}>
+    <View 
+      ref={ref}
+      onStartShouldSetResponder={() => true}
+      onResponderGrant={onPressIn}
+      onResponderRelease={onPressOut}
+      onResponderTerminate={onPressOut}
+      style={{ alignSelf: 'flex-start' }}
+    >
       {children}
-    </Pressable>
+    </View>
   );
 };
 

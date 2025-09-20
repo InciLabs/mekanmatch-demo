@@ -1,6 +1,6 @@
-import React from 'react';
-import { Pressable, View, Text, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
 import { useTheme } from '@contexts/ThemeContext';
+import React from 'react';
+import { Pressable, StyleSheet, Text, View, type TextStyle, type ViewStyle } from 'react-native';
 
 export type ToggleVariant = 'default' | 'outline' | 'secondary';
 export type ToggleSize = 'sm' | 'md' | 'lg';
@@ -68,7 +68,7 @@ export const Toggle: React.FC<ToggleProps> = ({
   return (
     <Pressable 
       onPress={toggle} 
-      accessibilityRole="switch"
+      accessibilityRole="button"
       accessibilityState={{ checked: pressed, disabled }}
       accessibilityValue={{ text: pressed ? 'On' : 'Off' }}>
       <View style={[styles.base, style]}>

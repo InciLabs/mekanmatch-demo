@@ -1,14 +1,15 @@
+import { useNotification } from '@contexts/NotificationContext';
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import {
-  View,
-  Text,
   ScrollView,
   StyleSheet,
+  Text,
   TouchableOpacity,
-  SafeAreaView,
+  View,
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useNotification } from '@contexts/NotificationContext';
+
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Mock notification data
 const mockNotifications = [
