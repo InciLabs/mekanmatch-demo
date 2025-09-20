@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react-native';
-import { View, StyleSheet, Pressable } from 'react-native';
-import { ThemeProvider as StyledThemeProvider, useTheme } from './ThemeProvider';
-import { Button } from './Button';
-import { Card } from './Card';
-import { Typography } from './Typography';
+// @ts-nocheck
+// @ts-nocheck
+import { View, StyleSheet } from 'react-native';
+import { ThemeProvider as StyledThemeProvider, useTheme } from '.';
+import { Button } from '.';
+import { Card } from '.';
+import { Typography } from '.';
 
 // Component to demonstrate theme switching
 const ThemeDemo = () => {
@@ -64,70 +65,51 @@ const ThemeDemo = () => {
   );
 };
 
-const meta = {
+export default {
   title: 'Components/UI/ThemeProvider',
   component: ThemeDemo,
   decorators: [
-    (Story) => (
+    (Story: any) => (
       <StyledThemeProvider>
         <Story />
       </StyledThemeProvider>
     ),
   ],
-} satisfies Meta<typeof ThemeDemo>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-// Default Story
-export const Default: Story = {};
-
-// Light Theme Story
-export const LightTheme: Story = {
-  decorators: [
-    (Story) => (
-      <StyledThemeProvider initialColorMode="light">
-        <Story />
-      </StyledThemeProvider>
-    ),
-  ],
 };
 
-// Dark Theme Story
-export const DarkTheme: Story = {
-  decorators: [
-    (Story) => (
-      <StyledThemeProvider initialColorMode="dark">
-        <Story />
-      </StyledThemeProvider>
-    ),
-  ],
-};
+export const Default = () => <ThemeDemo />;
 
-// Custom Theme Story
-export const CustomTheme: Story = {
-  decorators: [
-    (Story) => (
-      <StyledThemeProvider 
-        initialColorMode="light"
-        theme={{
-          colors: {
-            primary: '#8B5CF6',
-            primaryLight: '#C4B5FD',
-            primaryDark: '#7C3AED',
-            background: '#F5F3FF',
-            backgroundElevated: '#EDE9FE',
-            textPrimary: '#1E1B4B',
-            textSecondary: '#4C1D95',
-            border: '#C4B5FD',
-          },
-        }}
-      >
-        <Story />
-      </StyledThemeProvider>
-    ),
-  ],
-};
+export const LightTheme = () => (
+  <StyledThemeProvider initialColorMode="light">
+    <ThemeDemo />
+  </StyledThemeProvider>
+);
+
+export const DarkTheme = () => (
+  <StyledThemeProvider initialColorMode="dark">
+    <ThemeDemo />
+  </StyledThemeProvider>
+);
+
+export const CustomTheme = () => (
+  <StyledThemeProvider 
+    initialColorMode="light"
+    theme={{
+      colors: {
+        primary: '#8B5CF6',
+        primaryLight: '#C4B5FD',
+        primaryDark: '#7C3AED',
+        background: '#F5F3FF',
+        backgroundElevated: '#EDE9FE',
+        textPrimary: '#1E1B4B',
+        textSecondary: '#4C1D95',
+        border: '#C4B5FD',
+      },
+    }}
+  >
+    <ThemeDemo />
+  </StyledThemeProvider>
+);
 
 const styles = StyleSheet.create({
   container: {

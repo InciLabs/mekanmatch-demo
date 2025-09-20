@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, type ViewStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type SeparatorOrientation = 'horizontal' | 'vertical';
 

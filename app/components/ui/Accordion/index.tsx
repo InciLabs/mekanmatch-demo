@@ -1,8 +1,8 @@
 import React, { forwardRef, useState } from 'react';
 import { Animated, StyleSheet, TouchableOpacity, View, type ViewStyle, type TextStyle, Text } from 'react-native';
 import { ChevronDown } from 'lucide-react-native';
-import { useTheme } from '../../contexts/ThemeContext';
-import { createStyles } from './utils';
+import { useTheme } from '@contexts/ThemeContext';
+import { createStyles } from '@components/ui/utils';
 
 // Types
 export interface AccordionItemProps {

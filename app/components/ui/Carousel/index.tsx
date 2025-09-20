@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet, Dimensions, type ViewStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface CarouselProps {
   children: React.ReactNode[] | React.ReactNode;

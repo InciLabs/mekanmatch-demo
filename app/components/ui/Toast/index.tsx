@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, Animated, StyleSheet, Easing, TouchableOpacity, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type ToastType = 'default' | 'success' | 'error' | 'warning' | 'info';
 

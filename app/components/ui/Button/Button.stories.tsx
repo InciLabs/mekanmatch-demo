@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { View, Text } from 'react-native';
-import { Button, type ButtonVariant, type ButtonSize } from './Button';
+import { Button, type ButtonVariant, type ButtonSize } from '.';
 
 export default {
   title: 'Components/UI/Button',

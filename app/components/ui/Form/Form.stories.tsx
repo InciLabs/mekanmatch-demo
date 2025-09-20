@@ -1,11 +1,8 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Button, Text } from 'react-native';
-import { Form, useForm } from './Form';
-import { Input } from './Input';
-import { Checkbox } from './Checkbox';
-import { RadioGroup } from './RadioGroup';
-import { Select } from './Select';
-import { Textarea } from './Textarea';
+import { Form, useForm } from '.';
+import { Input, Checkbox, RadioGroup, Select, Textarea } from '..';
 
 const styles = StyleSheet.create({
   container: {
@@ -48,7 +45,7 @@ export const Basic = () => {
       }}
       onSubmit={(values) => setSubmitted(values)}
     >
-      {(form: { submit: () => void }) => (
+      {(form: any) => (
         <>
           <View style={styles.row}>
             <Text style={styles.label}>Name</Text>

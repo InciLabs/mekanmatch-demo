@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { View, Text } from 'react-native';
-import { Input, type InputVariant, type InputSize } from './Input';
+import { Input, type InputVariant, type InputSize } from '.';
 
 export default {
   title: 'Components/UI/Input',

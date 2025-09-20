@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Modal, Animated, StyleSheet, Pressable, Easing, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface SheetProps {
   open: boolean;

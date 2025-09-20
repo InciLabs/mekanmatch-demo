@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, View, Text, StyleSheet, Pressable, Animated, Easing, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface DialogProps {
   open: boolean;
@@ -9,7 +9,7 @@ export interface DialogProps {
   overlayDismiss?: boolean;
 }
 
-export interface DialogHeaderProps { children: React.ReactNode; style?: ViewStyle; titleStyle?: TextStyle; subtitleStyle?: TextStyle; title?: string; subtitle?: string; }
+export interface DialogHeaderProps { children?: React.ReactNode; style?: ViewStyle; titleStyle?: TextStyle; subtitleStyle?: TextStyle; title?: string; subtitle?: string; }
 export interface DialogContentProps { children: React.ReactNode; style?: ViewStyle; }
 export interface DialogFooterProps { children: React.ReactNode; style?: ViewStyle; }
 

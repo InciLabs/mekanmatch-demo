@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, Modal, Pressable, StyleSheet, UIManager, findNodeHandle, type ViewStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 interface CtxValue {
   open: boolean;
@@ -47,7 +47,11 @@ const Trigger: React.FC<HoverCardTriggerProps> = ({ children }) => {
   };
   const onPressOut = () => ctx.setOpen(false);
 
-  return React.cloneElement(children, { ref, onPressIn, onPressOut });
+  return (
+    <Pressable ref={ref as any} onPressIn={onPressIn} onPressOut={onPressOut}>
+      {children}
+    </Pressable>
+  );
 };
 
 export interface HoverCardContentProps { children: React.ReactNode; style?: ViewStyle; align?: 'start' | 'center' | 'end' }

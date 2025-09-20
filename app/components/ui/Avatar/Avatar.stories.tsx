@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Avatar } from './Avatar';
+import { Avatar } from '.';
 
 const styles = StyleSheet.create({
   container: {

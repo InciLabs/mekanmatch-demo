@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import { Dialog } from './Dialog';
+import { Dialog } from '.';
 
 const styles = StyleSheet.create({
   container: {

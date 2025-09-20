@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, type TextStyle, type ViewStyle, Pressable } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type LabelVariant = 'default' | 'muted' | 'error' | 'success' | 'warning';
 export type LabelSize = 'sm' | 'md' | 'lg';

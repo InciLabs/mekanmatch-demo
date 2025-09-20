@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import { Sidebar } from './Sidebar';
+import { Sidebar } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16 },

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native';
 import MapView, { Marker, Region, LatLng } from 'react-native-maps';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
+import { Button } from '@components/ui/Button';
+import { Badge } from '@components/ui/Badge';
 import { MapPin, Users, Navigation, ZoomIn, ZoomOut, Coffee, Music, Utensils, Wine } from 'lucide-react-native';
 
 type MapVenue = {

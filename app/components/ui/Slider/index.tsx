@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, PanResponder, LayoutChangeEvent, type ViewStyle, type TextStyle, Text } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface SliderProps {
   value?: number; // controlled

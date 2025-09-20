@@ -7,8 +7,8 @@ export const useNotifications = (userId?: string) => {
   const router = useRouter();
   const [pushToken, setPushToken] = useState<string | null>(null);
   const [isRegistered, setIsRegistered] = useState(false);
-  const notificationListener = useRef<Notifications.Subscription>();
-  const responseListener = useRef<Notifications.Subscription>();
+  const notificationListener = useRef<Notifications.Subscription | null>(null);
+  const responseListener = useRef<Notifications.Subscription | null>(null);
 
   useEffect(() => {
     // Register for push notifications
@@ -49,17 +49,13 @@ export const useNotifications = (userId?: string) => {
     );
 
     return () => {
-      if (notificationListener.current) {
-        Notifications.removeNotificationSubscription(notificationListener.current);
-      }
-      if (responseListener.current) {
-        Notifications.removeNotificationSubscription(responseListener.current);
-      }
+      notificationListener.current?.remove?.();
+      responseListener.current?.remove?.();
     };
   }, [userId]);
 
   const handleNotificationReceived = (notification: Notifications.Notification) => {
-    const data = notification.request.content.data as NotificationData;
+    const data = notification.request.content.data as unknown as NotificationData;
     
     // Update badge count
     updateBadgeCount();
@@ -79,37 +75,37 @@ export const useNotifications = (userId?: string) => {
   };
 
   const handleNotificationTap = (response: Notifications.NotificationResponse) => {
-    const data = response.notification.request.content.data as NotificationData;
+    const data = response.notification.request.content.data as unknown as NotificationData;
     
     // Navigate based on notification type
     switch (data.type) {
       case 'match':
         if (data.matchId) {
-          router.push(`/matches/${data.matchId}`);
+          router.push({ pathname: '/matches/[id]', params: { id: String(data.matchId) } } as any);
         } else {
-          router.push('/(tabs)/profile');
+          router.push('/(tabs)/profile' as any);
         }
         break;
       case 'message':
         if (data.chatId) {
-          router.push(`/chat/${data.chatId}`);
+          router.push({ pathname: '/chat/[id]', params: { id: String(data.chatId) } } as any);
         } else {
-          router.push('/(tabs)/chats');
+          router.push('/(tabs)/chats' as any);
         }
         break;
       case 'venue_update':
         if (data.venueId) {
-          router.push(`/venue/${data.venueId}`);
+          router.push({ pathname: '/venue/[id]', params: { id: String(data.venueId) } } as any);
         } else {
-          router.push('/(tabs)');
+          router.push('/(tabs)' as any);
         }
         break;
       case 'promotion':
       case 'alert':
-        router.push('/(tabs)/notifications');
+        router.push('/(tabs)/notifications' as any);
         break;
       default:
-        router.push('/(tabs)');
+        router.push('/(tabs)' as any);
     }
   };
 

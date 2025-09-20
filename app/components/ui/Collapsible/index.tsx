@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Animated, StyleSheet, Pressable, Text, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface CollapsibleProps {
   open?: boolean;

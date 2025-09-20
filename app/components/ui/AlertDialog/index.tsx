@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
-import { Dialog } from './Dialog';
-import { useTheme } from '../../contexts/ThemeContext';
+import { Dialog } from '@components/ui/Dialog';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface AlertDialogProps {
   open: boolean;

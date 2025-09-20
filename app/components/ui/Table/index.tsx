@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface TableProps {
   children: React.ReactNode;
   style?: ViewStyle;
   headerSticky?: boolean;
-  height?: number | string;
+  height?: number;
 }
 
 export interface TableHeaderProps { children: React.ReactNode; style?: ViewStyle }

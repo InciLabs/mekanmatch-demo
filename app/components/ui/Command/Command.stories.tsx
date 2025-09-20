@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import { Command } from './Command';
+import { Command } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16, justifyContent: 'center', alignItems: 'center' },

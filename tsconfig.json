@@ -2,17 +2,28 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./app/*"],
+      "@components/*": ["./app/components/*"],
+      "@contexts/*": ["./app/contexts/*"],
+      "@services/*": ["./app/services/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@utils/*": ["./app/utils/*"]
     }
   },
   "include": [
     "app/**/*.ts",
     "app/**/*.tsx",
+    "app/contexts/**/*.ts",
+    "app/contexts/**/*.tsx",
+    "app/services/**/*.ts",
+    "app/services/**/*.tsx",
+    "app/hooks/**/*.ts",
+    "app/hooks/**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "**/*.stories.tsx"
   ],
   "exclude": [
     "app/replit_ui/**/*",
@@ -20,6 +31,6 @@
     "backend/**/*",
     "contexts/**/*",
     "services/**/*",
-    "hooks/useNotifications.ts"
+    "hooks/**/*"
   ]
 }

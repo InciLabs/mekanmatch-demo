@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { MapPin } from 'lucide-react-native';
-import { Badge } from '../ui/Badge';
-import { CrowdBar } from './CrowdBar';
+import { Badge } from '@components/ui/Badge';
+import { CrowdBar } from '@components/venue/CrowdBar';
 
 type VenueWithStats = {
   id: string;

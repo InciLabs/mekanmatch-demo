@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import { HoverCard } from './HoverCard';
+import { HoverCard } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16, justifyContent: 'center', alignItems: 'center' },

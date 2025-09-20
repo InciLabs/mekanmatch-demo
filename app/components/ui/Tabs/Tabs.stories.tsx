@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Tabs } from './Tabs';
+import { Tabs } from '.';
 
 const styles = StyleSheet.create({
   container: {

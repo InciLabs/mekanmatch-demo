@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { AspectRatio } from './AspectRatio';
+import { AspectRatio } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16 },

@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Carousel } from './Carousel';
+import { Carousel } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16 },

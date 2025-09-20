@@ -1,6 +1,6 @@
+import { useTheme } from '@contexts/ThemeContext';
 import React from 'react';
-import { TextInput, StyleSheet, View, Text, type TextInputProps, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { StyleSheet, Text, TextInput, View, type TextInputProps, type TextStyle, type ViewStyle } from 'react-native';
 
 export type TextareaVariant = 'default' | 'error' | 'success';
 export type TextareaSize = 'sm' | 'md' | 'lg';

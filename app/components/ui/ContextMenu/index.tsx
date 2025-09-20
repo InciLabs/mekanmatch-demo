@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Modal, Pressable, StyleSheet, UIManager, findNodeHandle, GestureResponderEvent, Text, TouchableOpacity, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 interface CtxValue {
   open: boolean;
@@ -44,7 +44,10 @@ const Trigger: React.FC<ContextMenuTriggerProps> = ({ children }) => {
     ctx.setOpen(true);
   };
 
-  return React.cloneElement(children, { ref, onLongPress });
+  if (React.isValidElement(children)) {
+    return React.cloneElement(children as any, { onLongPress });
+  }
+  return children;
 };
 
 export interface ContextMenuContentProps {

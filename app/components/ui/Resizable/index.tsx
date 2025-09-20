@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, PanResponder, type ViewStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface ResizableProps {
   initialSize?: number; // pixels for primary pane

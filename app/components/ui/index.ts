@@ -156,7 +156,7 @@ export {
   type ColorMode,
   type Theme,
   type ThemeProviderProps,
-} from '../../contexts/ThemeContext';
+} from '@contexts/ThemeContext';
 
 // Utils
 export * from './utils';

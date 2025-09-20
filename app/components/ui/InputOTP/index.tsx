@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface InputOTPProps {
   length?: number;

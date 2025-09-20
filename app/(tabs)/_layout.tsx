@@ -1,10 +1,10 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Platform } from 'react-native';
-import { useNotificationContext } from '../../contexts/NotificationContext';
+import { useNotification } from '@contexts/NotificationContext';
 
 export default function TabLayout() {
-  const { badgeCount } = useNotificationContext();
+  const { badgeCount } = useNotification();
 
   return (
     <Tabs

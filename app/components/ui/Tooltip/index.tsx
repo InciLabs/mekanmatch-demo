@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, Modal, Pressable, StyleSheet, UIManager, findNodeHandle, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 interface TooltipCtxValue {
   open: boolean;
@@ -49,7 +49,11 @@ const Trigger: React.FC<TooltipTriggerProps> = ({ children }) => {
 
   const onPressOut = () => ctx.setOpen(false);
 
-  return React.cloneElement(children, { ref, onPressIn, onPressOut });
+  return (
+    <Pressable onPressIn={onPressIn} onPressOut={onPressOut}>
+      {children}
+    </Pressable>
+  );
 };
 
 export interface TooltipContentProps {

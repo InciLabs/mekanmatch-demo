@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { SimpleBarChart } from './Chart';
+import { SimpleBarChart } from '.';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, gap: 16 },

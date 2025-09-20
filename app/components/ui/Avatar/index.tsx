@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet, type ImageStyle, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type AvatarSize = 'sm' | 'md' | 'lg' | number; // number supports custom px
 export type AvatarShape = 'circle' | 'square';

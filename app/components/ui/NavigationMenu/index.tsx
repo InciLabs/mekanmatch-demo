@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface NavigationMenuProps {
   value?: string;

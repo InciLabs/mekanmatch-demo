@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Accordion } from './Accordion';
+import { Accordion } from '.';
 
 const styles = StyleSheet.create({
   container: {

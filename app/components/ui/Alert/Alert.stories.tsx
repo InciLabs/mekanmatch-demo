@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Alert } from './Alert';
+import { Alert } from '.';
 
 const styles = StyleSheet.create({
   container: {

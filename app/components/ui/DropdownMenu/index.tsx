@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, Modal, Pressable, StyleSheet, TouchableOpacity, type ViewStyle, type TextStyle, type LayoutChangeEvent, findNodeHandle, UIManager } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 interface CtxValue {
   open: boolean;
@@ -52,7 +52,10 @@ const Trigger: React.FC<DropdownMenuTriggerProps> = ({ children }) => {
     }
   };
 
-  return React.cloneElement(children, { ref, onPress });
+  if (React.isValidElement(children)) {
+    return React.cloneElement(children as any, { onPress });
+  }
+  return children;
 };
 
 export interface DropdownMenuContentProps {

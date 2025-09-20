@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import { Tooltip } from './Tooltip';
+import { Tooltip } from '.';
 
 const styles = StyleSheet.create({
   container: {

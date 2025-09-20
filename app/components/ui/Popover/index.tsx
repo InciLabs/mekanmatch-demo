@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, Modal, Pressable, StyleSheet, UIManager, findNodeHandle, type ViewStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 interface PopoverContextValue {
   open: boolean;
@@ -49,7 +49,11 @@ const Trigger: React.FC<PopoverTriggerProps> = ({ children }) => {
     }
   };
 
-  return React.cloneElement(children, { ref, onPress });
+  return (
+    <Pressable ref={ref as any} onPress={onPress}>
+      {children}
+    </Pressable>
+  );
 };
 
 export interface PopoverContentProps {

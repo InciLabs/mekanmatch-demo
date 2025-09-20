@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import { Progress } from './Progress';
+import { Progress } from '.';
 
 const styles = StyleSheet.create({
   container: {

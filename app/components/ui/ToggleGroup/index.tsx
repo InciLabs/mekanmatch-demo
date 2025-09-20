@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, type ViewStyle } from 'react-native';
-import { Toggle } from './Toggle';
+import { Toggle } from '@components/ui/Toggle';
 
 export type ToggleGroupType = 'single' | 'multiple';
 

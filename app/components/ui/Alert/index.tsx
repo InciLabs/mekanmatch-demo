@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
 import { Info, CheckCircle2, AlertTriangle, XCircle } from 'lucide-react-native';
-import { createStyles } from './utils';
-import { useTheme } from '../../contexts/ThemeContext';
+import { createStyles } from '@components/ui/utils';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type AlertVariant = 'default' | 'info' | 'success' | 'warning' | 'destructive';
 

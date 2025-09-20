@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, View, StyleSheet, Text, type ViewStyle, type TextStyle } from 'react-native';
 import { Check } from 'lucide-react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface CheckboxProps {
   checked?: boolean;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, type TextProps, type TextStyle, StyleSheet } from 'react-native';
-import { colors, typography, type Theme } from './utils';
+import { colors, typography, type Theme } from '@components/ui/utils';
 
 type TextVariant = keyof typeof typography;
 type TextColor = keyof typeof colors | string;

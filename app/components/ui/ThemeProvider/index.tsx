@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
-import { colors, spacing, radius, typography, shadows, animations, createThemedStyles } from './utils';
+import { colors, spacing, radius, typography, shadows, animations, createThemedStyles } from '@components/ui/utils';
 
 export type ColorMode = 'light' | 'dark' | 'system';
 

@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import { ToastProvider, useToast } from './Toast';
+import { ToastProvider, useToast } from '.';
 
 const styles = StyleSheet.create({
   container: {

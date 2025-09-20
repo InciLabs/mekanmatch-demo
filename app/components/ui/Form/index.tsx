@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { View, Text, StyleSheet, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export type FormValues = Record<string, any>;
 export type FormErrors = Record<string, string | undefined>;
@@ -9,7 +9,7 @@ export interface FormProps {
   initialValues?: FormValues;
   validate?: (values: FormValues) => FormErrors | void;
   onSubmit: (values: FormValues) => void;
-  children: React.ReactNode;
+  children: React.ReactNode | ((form: { submit: () => void }) => React.ReactNode);
   style?: ViewStyle;
 }
 

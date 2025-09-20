@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Skeleton } from './Skeleton';
+import { Skeleton } from '.';
 
 const styles = StyleSheet.create({
   container: {

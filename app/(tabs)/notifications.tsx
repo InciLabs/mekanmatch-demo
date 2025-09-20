@@ -8,7 +8,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useNotificationContext } from '../../contexts/NotificationContext';
+import { useNotification } from '@contexts/NotificationContext';
 
 // Mock notification data
 const mockNotifications = [
@@ -99,7 +99,7 @@ const formatTimeAgo = (date: Date): string => {
 };
 
 export default function NotificationsScreen() {
-  const { badgeCount, clearAllNotifications } = useNotificationContext();
+  const { clearAllNotifications } = useNotification();
 
   const handleNotificationPress = (notificationId: string) => {
     // Mark as read and handle action

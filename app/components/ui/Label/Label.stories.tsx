@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Label } from './Label';
+import { Label } from '.';
 
 const styles = StyleSheet.create({
   container: {

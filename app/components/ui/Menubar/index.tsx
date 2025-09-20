@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, type ViewStyle, type TextStyle } from 'react-native';
-import { useTheme } from '../../contexts/ThemeContext';
-import { DropdownMenu } from './DropdownMenu';
+import { useTheme } from '@contexts/ThemeContext';
+import { DropdownMenu } from '@components/ui/DropdownMenu';
 
 export interface MenubarProps {
   children: React.ReactNode;

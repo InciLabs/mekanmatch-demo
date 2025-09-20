@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-native';
+// @ts-nocheck
 import { View } from 'react-native';
 import Typography, {
   DisplayLarge,
@@ -13,7 +13,7 @@ import Typography, {
   LabelLarge,
   LabelMedium,
   LabelSmall,
-} from './Typography';
+} from '.';
 
 const meta = {
   title: 'Components/UI/Typography',

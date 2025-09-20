@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Modal, FlatList, TouchableOpacity, type ViewStyle, type TextStyle } from 'react-native';
 import { ChevronDown } from 'lucide-react-native';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '@contexts/ThemeContext';
 
 export interface SelectOption {
   label: string;
@@ -82,7 +82,7 @@ export const Select: React.FC<SelectProps> = ({
       paddingVertical: 12,
       borderBottomWidth: 1,
       borderBottomColor: colors.gray200,
-      backgroundColor: colors.gray50,
+      backgroundColor: colors.gray100,
     },
     headerText: {
       fontWeight: '600',

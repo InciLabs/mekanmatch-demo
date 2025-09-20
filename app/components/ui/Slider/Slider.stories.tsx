@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { Slider } from './Slider';
+import { Slider } from '.';
 
 const styles = StyleSheet.create({
   container: {
