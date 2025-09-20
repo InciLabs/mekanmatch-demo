@@ -9,9 +9,17 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
+  ],
+  "exclude": [
+    "app/replit_ui/**/*",
+    "replit-generated/**/*",
+    "backend/**/*",
+    "contexts/**/*",
+    "services/**/*",
+    "hooks/useNotifications.ts"
   ]
 }
